@@ -1,13 +1,23 @@
 'use strict';
 
-function Thermostat() {
-  this.temperature = 20;
-  this.MINIMUM_TEMPERATURE = 10
-  this.MAXIMUM_TEMPERATURE = 25
-  this.powerSave = true
-  this.colour = 'Yellow'
-  this.updateEnergy()
+function Note(text) {
+  this.text = text;
+
 }
+
+Note.prototype.getText = function () {
+  return this.title
+};
+
+
+var note = new Note("This is the text of the note")
+
+
+
+
+
+
+
 
 Thermostat.prototype.increaseTemperature = function(number = 1) {
   if (this.temperature + number >= this.MAXIMUM_TEMPERATURE) {

@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <div class="text-center">
     <title>Thermostat</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="bootstrap-switch.css" rel="stylesheet">
   </head>
-  <body>
+  <body background="http://eskipaper.com/images/warm-background-1.jpg">
     <section>
       <h1>Thermostat temperature: <span id="temperature"></span></h1>
     </section>
     <section>
       <h1>Current temperature: <span id="current-temperature"></span></h1>
+
+
       <form id="select-city">
-        <input id="current-city" type="text" placeholder="Enter a city"></input>
-        <input type="submit"></input>
+        <input class="input-sm" id="current-city" type="text" placeholder="Enter a city"></input>
+        <input class="btn btn-default" type="submit"></input>
       </form>
     </section>
       <p>
-      <div class="row">
+      <div>
         <div class="col-md-4"/div>
         <div class="col-md-4"/div>
         <div class="col-md-4"/div>
@@ -27,12 +31,16 @@
           <button type="button" class="btn btn-primary" id="temperature-reset">reset</button>
           <button type="button" class="btn btn-success btn-lg" id="temperature-down">-</button>
         </div>
-        <div class="btn-group-vertical">
+        <br>
+        <br>
 
-        power saving mode is <span id="power-saving-status">on</span>
-        <button id="powersaving-on">PSM on</button>
-        <button id="powersaving-off">PSM off</button>
+        <div>
+          <span id="power-saving-status"></span>
+          <button class="btn b"id="powersaving-on">PSM on</button>
+          <button class="btn b"id="powersaving-off">PSM off</button>
+        </div>
       </p>
+
     <script src="src/Thermostat.js"></script>
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/interface.js"></script>
